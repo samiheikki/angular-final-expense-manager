@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-declare var accounting;
+declare var accounting: any;
 
 @Component({
   selector: 'expense-editor',
@@ -12,7 +12,7 @@ export class ExpenseEditor {
 
   @Output() closeEditor = new EventEmitter();
 
-  private onSubmit(updated) {
+  private onSubmit(updated:any) {
     // Should save changes to some backend API probably
     // but we'll just update the object in this demo instead
     Object.assign(this.expense, updated);
@@ -28,7 +28,7 @@ export class ExpenseEditor {
 
   }
 
-  private upload(e) {
+  private upload(e:any) {
     const file = e.detail.file;
     var reader  = new FileReader();
 
@@ -41,7 +41,7 @@ export class ExpenseEditor {
     }
   }
 
-  private formatMoney(value) {
+  private formatMoney(value:any) {
     return accounting.formatMoney(value, '');
   }
 }

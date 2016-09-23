@@ -22,7 +22,7 @@ export class OverviewPanel implements OnInit{
     after.setFullYear(before.getFullYear() - 1);
     const url = './api/expenses?index=322&count=&before=' + before.toISOString() +
         '&after=' + after.toISOString();
-    (<any>window).getJSON(url, (data) => this.setData(data));
+    (<any>window).getJSON(url, (data: any) => this.setData(data));
   }
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class OverviewPanel implements OnInit{
   setData(data: any[]) {
     let today = new Date();
     let totalExpenses = 0;
-    let newMonthlyExpenses = [];
+    let newMonthlyExpenses: any = [];
     for (var i = 0; i <= this.displayPeriod; i++) {
       newMonthlyExpenses[i] = {'y':0};
     }
