@@ -10,7 +10,6 @@ import { ExpensesList } from './expenses-list/expenses_list.component';
 import { OverviewPanel } from './overview-panel/overview_panel.component';
 import { SearchFilters } from './search-filters/search_filters.component';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,6 +25,7 @@ import { SearchFilters } from './search-filters/search_filters.component';
     PolymerElement('paper-dialog'),
     PolymerElement('paper-input'),
     PolymerElement('paper-textarea'),
+    PolymerElement('paper-toast'),
     PolymerElement('vaadin-bar-chart'),
     PolymerElement('vaadin-combo-box'),
     PolymerElement('vaadin-date-picker'),

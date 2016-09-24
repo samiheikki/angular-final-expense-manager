@@ -13,6 +13,7 @@ declare var accounting: any;
 export class ExpensesList {
   @Output() editExpense = new EventEmitter();
   @ViewChild('grid') grid: any;
+  @ViewChild('toast') toast: any;
 
   filters: Object;
   sortOrder: Object;
@@ -86,6 +87,12 @@ export class ExpensesList {
     totalCount -= filters.max ? 300 : 0;
     (<any>window).getJSON(url, (data: any) => {
       callback(data, totalCount);
+
+      if (data.length === 0 && this.toast) {
+        this.toast.nativeElement.open();
+      } else if (this.toast) {
+        this.toast.nativeElement.hide();
+      }
     });
   }
 
