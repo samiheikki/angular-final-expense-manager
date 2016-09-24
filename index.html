@@ -27,10 +27,10 @@
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-toast/paper-toast.html">
     <link rel="import" href="bower_components/vaadin-grid/vaadin-grid.html">
-    <link rel="import" href="bower_components/vaadin-charts/vaadin-bar-chart.html">
     <link rel="import" href="bower_components/vaadin-combo-box/vaadin-combo-box.html">
     <link rel="import" href="bower_components/vaadin-date-picker/vaadin-date-picker.html">
     <link rel="import" href="bower_components/vaadin-upload/vaadin-upload.html">
+    <link rel="import" href="app/chart-element.html">
     <link rel="import" href="styles/app-theme.html">
 
     <script src="bower_components/accounting/accounting.min.js" charset="utf-8"></script>
@@ -45,9 +45,9 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      //document.addEventListener('WebComponentsReady', function() {
+      document.addEventListener('WebComponentsReady', function() {
           System.import('app').catch(function(err){ console.error(err); });
-      //});
+      });
     </script>
   </head>
 

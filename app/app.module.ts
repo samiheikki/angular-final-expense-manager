@@ -26,7 +26,7 @@ import { SearchFilters } from './search-filters/search_filters.component';
     PolymerElement('paper-input'),
     PolymerElement('paper-textarea'),
     PolymerElement('paper-toast'),
-    PolymerElement('vaadin-bar-chart'),
+    PolymerElement('chart-element'),
     PolymerElement('vaadin-combo-box'),
     PolymerElement('vaadin-date-picker'),
     PolymerElement('vaadin-grid'),
