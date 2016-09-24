@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 
 import { ExpenseApp } from './expense_app.component';
@@ -11,7 +12,10 @@ import { SearchFilters } from './search-filters/search_filters.component';
 
 
 @NgModule({
-  imports: [ BrowserModule ],
+  imports: [
+    BrowserModule,
+    FormsModule
+   ],
   declarations: [
     ExpenseApp,
     OverviewPage,
@@ -21,6 +25,7 @@ import { SearchFilters } from './search-filters/search_filters.component';
     SearchFilters,
     PolymerElement('paper-dialog'),
     PolymerElement('paper-input'),
+    PolymerElement('paper-textarea'),
     PolymerElement('vaadin-bar-chart'),
     PolymerElement('vaadin-combo-box'),
     PolymerElement('vaadin-date-picker'),

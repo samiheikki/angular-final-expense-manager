@@ -23,7 +23,7 @@ export class ExpenseEditor {
   private close() {
     this.closeEditor.emit(false);
     setTimeout(()=> {
-      this.expense = {};
+      //this.expense = {};
     }, 100);
 
   }
